@@ -12,7 +12,7 @@ function getStaffStats($staff) {
         /* Unknown or invalid staff */
         if(!$staff || (!is_object($staff) && !($staff=Staff::lookup($staff))) || !$staff->isStaff())
             return null;
-
+/*
         $where = array('(ticket.staff_id='.db_input($staff->getId()) .' AND
                     status.state="open")');
         $where2 = '';
