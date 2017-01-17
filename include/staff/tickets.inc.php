@@ -1,6 +1,7 @@
 
 <?php
 
+/*
 switch(strtolower($_REQUEST['status'])){ //Status is overloaded
     case 'open':
         $status='open';
@@ -29,6 +30,7 @@ switch(strtolower($_REQUEST['status'])){ //Status is overloaded
         $results_type=__('Answered Tickets');
         break;
     default:
+    */
     //CHANGE THIS BLOCK
         if (!$search && !isset($_REQUEST['advsid'])) {
             if (!isset($_REQUEST['status'])) {
@@ -40,6 +42,7 @@ switch(strtolower($_REQUEST['status'])){ //Status is overloaded
             }
         }
         break;
+/*
 }
 
 
@@ -55,8 +58,9 @@ if (isset($_REQUEST['uid']) && $_REQUEST['uid']) {
             .' OR collab.user_id='.db_input($_REQUEST['uid']).') ';
     $qs += array('uid' => $_REQUEST['uid']);
 }
+*/
 
-//add this line here
+//add this line to here
 $qwhere.=Tabs::getTicketListSqlQuery($_REQUEST['status'],$results_type);
 
 
