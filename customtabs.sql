@@ -1,7 +1,27 @@
 --Custom Tabs Table Create Script;
 
+/*
+order_no: Tab Order
+tab_name:anyword to use
+page_name: for tickets.php default value is tickets( exclude '.php' extension)
+display_name=Displaying tab name
+tab_isenable= 1 or 0 
 
+access rights
+allow_isadmin: if this value is 1 and you have the admin account you can see tab
+allow_staff_id: example staff id list : 1,2,3,4 .... allowed staffid list
+allow_dept_id: example dept id list : 1,2,3,4 ... allowed dept id list
 
+criteria
+ticket_isopen: 1 or 0
+ticket_isanswered: 0 or 1 and 2 for both status
+ticket_status_id_list: ost_ticket_status list ids 1,2,3 ....
+ticket_topic_id_list: ost_help_topic list ids 1,2,3....
+ticket_dept_id_list: ost_department list ids 1,2,3...
+ticket_team_id_list: ost_team list ids 1,2,3...
+ticket_iconlass: example; you can select from scp.css "assignedTickets"
+
+*/
 CREATE TABLE `ost_ticket_tabs` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`order_no` INT(11) NOT NULL DEFAULT '0',
