@@ -5,7 +5,7 @@ require_once(INCLUDE_DIR . 'class.tabs.php');
 
 // And change the getstaffstats function like this or add function  between part of query Tabs::getTicketTabSqlQuery($where,$where2)
 
-
+/*
 function getStaffStats($staff) {
         global $cfg;
 
@@ -44,12 +44,12 @@ function getStaffStats($staff) {
                             AND status.state=\'open\') '
                 .'WHERE ticket.isanswered = 1 '
                 . $where
-                
+                */
                 // ADD THIS LINE
                 .
                    Tabs::getTicketTabSqlQuery($where,$where2)
                 .
-
+/*
                 .'UNION SELECT \'overdue\', count( ticket.ticket_id ) AS tickets '
                 .'FROM ' . TICKET_TABLE . ' ticket '
                 .'INNER JOIN '.TICKET_STATUS_TABLE. ' status
@@ -81,3 +81,4 @@ function getStaffStats($staff) {
         }
         return $stats;
     }
+*/
