@@ -9,7 +9,7 @@ require_once(INCLUDE_DIR . 'class.tabs.php');
 function getStaffStats($staff) {
         global $cfg;
 
-        /* Unknown or invalid staff */
+
         if(!$staff || (!is_object($staff) && !($staff=Staff::lookup($staff))) || !$staff->isStaff())
             return null;
 /*
